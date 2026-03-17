@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7ff 0%, #e8f0ff 50%, #e0e7ff 100%);
+}
+
+.student-paper {
+  width: min(980px, 100%);
+  padding: clamp(1.2rem, 1.8vw, 2rem);
+  border: 1px solid #c7d2f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(147, 169, 225, 0.15);
+  animation: rise-in 520ms ease-out both;
+  backdrop-filter: blur(10px);
+}
+
+.title-band {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.table-shell {
+  border-color: #c7d2f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.student-row {
+  animation: row-slide 420ms ease both;
+}
+
+.empty-state {
+  padding: 2.5rem;
+  text-align: center;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #b8c8e8;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+}
+
+@keyframes rise-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes row-slide {
+  from {
+    transform: translateX(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
